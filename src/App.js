@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+
+// import Acerca  from "./componetes/Acerca/acerca";
+// import Servicio  from "./componetes/servicios/servicio";
+// import Portada from "./componetes/portada/Portada";
+
+import Header from "./componetes/header/Header";
+
+import {Route} from "wouter"
+import Configuracion from './componetes/configuracion/Configuracion'
+import Principal from './componetes/principal/principal'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App"> 
+      <Header/>
+      
+      
+      <Route path="/" component={Principal} />
+      <Route path="/configuracion" component={Configuracion}/>
+
     </div>
   );
 }
